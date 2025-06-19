@@ -8,10 +8,11 @@
 #ifndef IAP_CONFIG_H
 #define IAP_CONFIG_H
 
-/* 监听更新命令一段时间，适用于对刚上电时实时性要求不高的应用，否则应采用引脚检测等其他方案		
+/*  "USE_LISTEN_UPDATE_COMMAND"说明： 
+	监听更新命令一段时间，适用于对刚上电时实时性要求不高的应用，否则应采用引脚检测等其他方案		
 	优点：
-	1、不用在APP监听更新命令，简化APP开发复杂度（修改IROM1和中断向量偏移即可）
-	2、解决因更新错固件或者因各种意外情况导致更新失败导致的升级后变砖
+	1、降低APP复杂度，不用在APP监听和响应更新命令（修改IROM1和中断向量偏移即可），上位机也不用切换波特率
+	2、防止因更新错固件等其他意外情况导致的升级后变砖
 	3、无需硬件上额外引出引脚
 	缺点：
 	1、每次上电需要等待一段时间
@@ -21,9 +22,9 @@
 #define USE_LISTEN_UPDATE_COMMAND 1 /**< 使用上电监听更新命令功能 */
 #define USE_RS485                 1 /**< 使用RS485 */
 
-/* App区域地址 */
+/* App区域地址，根据不同芯片进行修改 */
 #define ApplicationAddress (0x08000000 + 16 * 1024)
-/* App区域和Bootloader区域共享信息的地址 */
+/* App和Bootloader共享信息的地址，根据不同芯片进行修改 */
 #define IAP_FLAG_ADDR      (ApplicationAddress - 2 * 1024)
 
 /* 调试信息打印开关 */
@@ -31,11 +32,11 @@
 
 /* Bootloader IAP命令 -----------------------------------------*/
 #define CMD_STRING_SIZE        ((uint16_t)128)       /* 命令字符串的最大长度 */
-#define CMD_UPDATE_STR            "update" /* 更新 */
-#define CMD_UPLOAD_STR            "upload" /* 上传Flash */
-#define CMD_ERASE_STR             "erase"  /* 擦除Flash */
 #define CMD_MENU_STR              "menu"   /* bootloader主菜单界面 */
 #define CMD_RUNAPP_STR            "runapp" /* 运行APP */
+#define CMD_UPDATE_STR            "update" /* 更新 */
+#define CMD_ERASE_STR             "erase"  /* 擦除Flash */
+#define CMD_UPLOAD_STR            "upload" /* 上传Flash */
 #define CMD_DISWP_STR             "diswp"  /* 取消读写保护 */
 
 /* Umodem固件更新协议字段 -----------------------------------------*/
@@ -50,8 +51,8 @@
 /* 以字为单位 */
 #define INIT_FLAG_DATA         ((uint32_t)(0xFFFFFFFF))  // 默认标志的数据(空片子的情况)
 #define UPDATE_FLAG_DATA       ((uint32_t)(0xEEEEEEEE))  // 下载标志的数据
-#define UPLOAD_FLAG_DATA       ((uint32_t)(0xDDDDDDDD))  // 上传标志的数据
-#define ERASE_FLAG_DATA        ((uint32_t)(0xCCCCCCCC))  // 擦除标志的数据
+#define ERASE_FLAG_DATA        ((uint32_t)(0xDDDDDDDD))  // 擦除标志的数据
+#define UPLOAD_FLAG_DATA       ((uint32_t)(0xCCCCCCCC))  // 上传标志的数据
 #define APPRUN_ERROR_FLAG_DATA ((uint32_t)(0xBBBBBBBB))  // 更新或升级失败标志
 #define APPRUN_FLAG_DATA       ((uint32_t)(0x5A5A5A5A))  // APP不需要做任何处理，直接运行状态
 
