@@ -354,10 +354,10 @@ namespace win_iap_ymodem        // 相当于一个文件夹
 
         private ACKResult SendUpdateCommand(String cmd, String ack)
         {
-            int retryTime = 200;
+            int retryTime = 100;    // 100ms
             int retryCount = 0;
 
-            while (retryCount < 40)     // 8秒
+            while (retryCount < 100)     // 10秒
             {
                 // 发送"cmd"命令
                 serialPort1.Write(cmd);

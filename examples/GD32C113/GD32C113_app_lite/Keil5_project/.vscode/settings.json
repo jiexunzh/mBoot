@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "split.h": "c",
+        "data_convert.h": "c",
+        "crc16.h": "c",
+        "stdint.h": "c",
+        "modbus_common.h": "c",
+        "modbus_canfd.h": "c",
+        "modbus_registers.h": "c",
+        "limits": "c",
+        "memory": "c",
+        "modbus_canfd_slave.h": "c",
+        "can.h": "c",
+        "gd32c11x_can.h": "c",
+        "slave.h": "c",
+        "data.h": "c",
+        "bsp_can.h": "c",
+        "canfdlink.h": "c",
+        "canfdlink_port.h": "c",
+        "bsp_led.h": "c",
+        "gd32c11x.h": "c",
+        "bsp_systick.h": "c"
+    }
+}
