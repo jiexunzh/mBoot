@@ -1,3 +1,22 @@
+/**
+ ******************************************************************************
+ * @file    utils_crc16-ccitt.c
+ * @brief   CRC16-CCITT 校验算法实现
+ *
+ * @details 提供不同等级的 CRC 计算方式，包括按位、按半字节等算法，
+ *          以平衡 Flash 空间与计算性能。
+ *          多项式固定为 0x1021，初始值为 0xFFFF，CRC 低位在前。
+ *
+ * @note    可通过宏定义选择 CRC 算法实现方式：
+ *          - USE_CRC16_CCITT_1：按位，最节省空间但最慢；
+ *          - USE_CRC16_CCITT_2：按半字节，折中；
+ *          - USE_CRC16_CCITT_3：按字节查表计算，速度最快，但占用空间最大。
+ *
+ * @author  ZJX
+ * @date    2025-06-20
+ * @version 1.0
+ ******************************************************************************
+ */
 #include "utils_crc16-ccitt.h"
 
 // #define USE_CRC16_CCITT_1    /**< Flash Space: Small; Calculation Speed: Slow */
@@ -131,10 +150,10 @@ uint16_t crc_cal_by_byte(uint8_t* ptr, uint32_t len)
 #endif
 
 /**
- * @brief  计算crc16-ccitt
- * @param  ptr 指向发送缓冲区的首字节
- * @param  len 要发送的总字节数
- * @retval uint16_t
+ * @brief   计算 CRC16-CCITT 校验值
+ * @param   ptr 指向数据缓冲区
+ * @param   len 数据长度（字节）
+ * @return  计算得到的 CRC 校验值（低位在前）
  */
 uint16_t crc16_ccitt_cal(uint8_t* ptr, uint32_t len)
 {

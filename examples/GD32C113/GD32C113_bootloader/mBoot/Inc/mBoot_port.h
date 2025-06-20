@@ -21,7 +21,7 @@
 #define MBOOT_PORT_H
 
 #include <stdint.h>
-// #include "gd32c11x.h"
+#include "gd32c11x.h"
 
 /**** mBoot UART port ****/
 void mBoot_uart_init(void);

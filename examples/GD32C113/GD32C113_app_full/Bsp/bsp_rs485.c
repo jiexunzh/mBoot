@@ -39,7 +39,6 @@ void bsp_rs485_dir_init(void)
     rcu_periph_clock_enable(RCU_GPIOA);
     /* configure LED1 GPIO port */ 
     gpio_init(GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ,GPIO_PIN_1);
-	RS485_DIR_RX_EN;
 }
 
 /* retarget the C library printf function to the USART */

@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,GD32C11X</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\CMSIS\GD\GD32C11x\Include;..\Libraries\GD32C11x_standard_peripheral\Include;..\Bsp;..\App;..\IAP</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\CMSIS\GD\GD32C11x\Include;..\Libraries\GD32C11x_standard_peripheral\Include;..\Bsp;..\App;..\uBoot\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,20 +393,20 @@
               <FileType>1</FileType>
               <FilePath>..\App\main.c</FilePath>
             </File>
+            <File>
+              <FileName>mBoot_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\mBoot_config.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>IAP</GroupName>
+          <GroupName>uBoot</GroupName>
           <Files>
             <File>
-              <FileName>iap_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\IAP\iap_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>iap_app.c</FileName>
+              <FileName>mBoot_app.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\IAP\iap_app.c</FilePath>
+              <FilePath>..\uBoot\Src\mBoot_app.c</FilePath>
             </File>
           </Files>
         </Group>

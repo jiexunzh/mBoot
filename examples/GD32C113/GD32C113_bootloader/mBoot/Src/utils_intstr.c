@@ -1,10 +1,25 @@
+/**
+ ******************************************************************************
+ * @file    utils_intstr.c
+ * @brief   整数与字符串转换函数实现
+ *
+ * @details 提供将整数转换为字符串（十进制）、将字符串解析为整数的工具函数。
+ *          常用于串口接收文本命令时的数值提取与响应。
+ *          不支持负数转换，需由上层调用者保证输入合法性。
+ *
+ * @note    本文件配套 utils_intstr.h 使用，常用于 Bootloader 命令解析阶段。
+ *
+ * @author  ZJX
+ * @date    2025-06-20
+ * @version 1.0
+ ******************************************************************************
+ */
 #include "utils_intstr.h"
 
 /**
- * @brief  Convert an Integer to a string
- * @param  str The string
- * @param  intnum The intger to be converted
- * @retval None
+ * @brief   将整数转换为字符串（十进制形式）
+ * @param   str 输出字符串缓冲区（保证足够大）
+ * @param   intnum 要转换的整数值（不支持负数）
  */
 void Int2Str(char* str, int32_t intnum)
 {
@@ -28,11 +43,10 @@ void Int2Str(char* str, int32_t intnum)
 }
 
 /**
- * @brief  Convert a string to an integer
- * @param  inputstr The string to be converted
- * @param  intnum The intger value
- * @retval 1: Correct
- *         0: Error
+ * @brief   将字符串转换为整数（十进制）
+ * @param   inputstr 输入的字符串指针
+ * @param   intnum 转换结果指针，转换成功则输出整数值
+ * @retval  1 表示转换成功，0 表示格式错误或超出范围
  */
 uint32_t Str2Int(char* inputstr, int32_t* intnum)
 {

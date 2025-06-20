@@ -13,9 +13,9 @@
  */
 #include "mBoot_port.h"
 #include "mBoot_config.h"
-// #include "bsp_flash.h"
-// #include "bsp_rs485.h"
-// #include "bsp_timer.h"
+#include "bsp_flash.h"
+#include "bsp_rs485.h"
+#include "bsp_timer.h"
 
 /**** UART port ****/
 /**
@@ -24,7 +24,7 @@
  */
 void mBoot_uart_init(void)
 {
-    // bsp_rs485_uart_init();
+    bsp_rs485_uart_init();
 }
 
 /**
@@ -34,8 +34,8 @@ void mBoot_uart_init(void)
  */
 void mBoot_uart_transmit_byte(uint8_t data)
 {
-    // usart_data_transmit(USART1, data);
-    // while(RESET == usart_flag_get(USART1, USART_FLAG_TBE));
+    usart_data_transmit(USART1, data);
+    while(RESET == usart_flag_get(USART1, USART_FLAG_TBE));
 }
 
 /**
@@ -44,7 +44,7 @@ void mBoot_uart_transmit_byte(uint8_t data)
  */
 uint8_t is_mBoot_uart_transmit_complete(void)
 {
-    // return usart_flag_get(USART1, USART_FLAG_TC);
+    return usart_flag_get(USART1, USART_FLAG_TC);
 }
 
 /**
@@ -53,7 +53,7 @@ uint8_t is_mBoot_uart_transmit_complete(void)
  */
 uint8_t is_mBoot_uart_receive_notEmpty(void)
 {
-    // return usart_flag_get(USART1, USART_FLAG_RBNE);
+    return usart_flag_get(USART1, USART_FLAG_RBNE);
 }
 
 /**
@@ -62,7 +62,7 @@ uint8_t is_mBoot_uart_receive_notEmpty(void)
  */
 uint8_t mBoot_uart_receive_byte(void)
 {
-    // return usart_data_receive(USART1);
+    return usart_data_receive(USART1);
 }
 
 /**** flash port ****/
@@ -75,7 +75,7 @@ uint8_t mBoot_uart_receive_byte(void)
  */
 void mBoot_write_flash(uint32_t WriteAddr, uint32_t* pBuffer, uint32_t NumToWrite)
 {
-    // flash_write_data(WriteAddr, pBuffer, NumToWrite);
+    flash_write_data(WriteAddr, pBuffer, NumToWrite);
 }
 
 /**
@@ -87,7 +87,7 @@ void mBoot_write_flash(uint32_t WriteAddr, uint32_t* pBuffer, uint32_t NumToWrit
  */
 void mBoot_read_flash(uint32_t ReadAddr, uint32_t* pBuffer, uint32_t NumToRead)
 {
-    // flash_read_data(ReadAddr, pBuffer, NumToRead);
+    flash_read_data(ReadAddr, pBuffer, NumToRead);
 }
 
 /**** delay port ****/
@@ -98,10 +98,10 @@ void mBoot_read_flash(uint32_t ReadAddr, uint32_t* pBuffer, uint32_t NumToRead)
  */
 void mBoot_delay_us(uint32_t us)
 {
-    // volatile int i, j;
-    // for (i = 0; i != us; i++)
-    //     for (j = 0; j < 10; j++)
-    //         ;
+    volatile int i, j;
+    for (i = 0; i != us; i++)
+        for (j = 0; j < 10; j++)
+            ;
 }
 
 /**** timer port if use listen update command function when MCU power on ****/
@@ -112,7 +112,7 @@ void mBoot_delay_us(uint32_t us)
 void mBoot_timer_init(void)
 {
 #if (USE_LISTEN_UPDATE == 1)
-    // bsp_timer_init();
+    bsp_timer_init();
 #endif
 }
 
@@ -123,7 +123,7 @@ void mBoot_timer_init(void)
 uint32_t mBoot_get_timer_counter(void)
 {
 #if (USE_LISTEN_UPDATE == 1)
-    // return timer_counter_read(TIMER1);
+    return timer_counter_read(TIMER1);
 #else
     return 0xFFFFFFFF;
 #endif
@@ -137,7 +137,7 @@ uint32_t mBoot_get_timer_counter(void)
 void mBoot_rs485_dir_init(void)
 {
 #if (USE_RS485 == 1)
-    // bsp_rs485_dir_init();
+    bsp_rs485_dir_init();
 #endif
 }
 
@@ -148,7 +148,7 @@ void mBoot_rs485_dir_init(void)
 void mBoot_rs485_dir_tx(void)
 {
 #if (USE_RS485 == 1)
-    // RS485_DIR_TX_EN;
+    RS485_DIR_TX_EN;
 #endif
 }
 
@@ -159,6 +159,6 @@ void mBoot_rs485_dir_tx(void)
 void mBoot_rs485_dir_rx(void)
 {
 #if (USE_RS485 == 1)
-    // RS485_DIR_RX_EN;
+    RS485_DIR_RX_EN;
 #endif
 }

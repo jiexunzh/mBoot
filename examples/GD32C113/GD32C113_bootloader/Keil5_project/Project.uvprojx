@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,GD32C11X</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\CMSIS\GD\GD32C11x\Include;..\Libraries\GD32C11x_standard_peripheral\Include;..\Bsp;..\App;..\IAP\Inc;..\IAP</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\CMSIS\GD\GD32C11x\Include;..\Libraries\GD32C11x_standard_peripheral\Include;..\Bsp;..\App;..\mBoot\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,40 +393,40 @@
               <FileType>1</FileType>
               <FilePath>..\App\main.c</FilePath>
             </File>
+            <File>
+              <FileName>mBoot_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\mBoot_config.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>IAP</GroupName>
+          <GroupName>uBoot</GroupName>
           <Files>
             <File>
-              <FileName>iap_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\IAP\iap_config.h</FilePath>
+              <FileName>mBoot_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mBoot\Src\mBoot_main.c</FilePath>
             </File>
             <File>
-              <FileName>iap_main.c</FileName>
+              <FileName>mBoot_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\IAP\Src\iap_main.c</FilePath>
+              <FilePath>..\mBoot\Src\mBoot_port.c</FilePath>
             </File>
             <File>
-              <FileName>iap_update.c</FileName>
+              <FileName>mBoot_update.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\IAP\Src\iap_update.c</FilePath>
-            </File>
-            <File>
-              <FileName>iap_port.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\IAP\Src\iap_port.c</FilePath>
-            </File>
-            <File>
-              <FileName>utils_intstr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\IAP\Src\utils_intstr.c</FilePath>
+              <FilePath>..\mBoot\Src\mBoot_update.c</FilePath>
             </File>
             <File>
               <FileName>utils_crc16-ccitt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\IAP\Src\utils_crc16-ccitt.c</FilePath>
+              <FilePath>..\mBoot\Src\utils_crc16-ccitt.c</FilePath>
+            </File>
+            <File>
+              <FileName>utils_intstr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mBoot\Src\utils_intstr.c</FilePath>
             </File>
           </Files>
         </Group>
