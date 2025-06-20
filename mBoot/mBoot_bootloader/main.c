@@ -1,13 +1,13 @@
 /**
  ******************************************************************************
  * @file    main.c
- * @brief   mBoot Bootloader µÄÖ÷º¯ÊýÈë¿Ú
+ * @brief   mBoot Bootloader çš„ä¸»å‡½æ•°å…¥å£
  *
- * @details Æô¶¯ºó³õÊ¼»¯´®¿Ú¡¢¶¨Ê±Æ÷ºÍ·½Ïò¿ØÖÆÒý½Å£¬
- *          ¼ì²éÊÇ·ñÎªÊ×´ÎÉÏµç»òµ÷ÊÔÆ÷Ë¢Èë APP µÄÇé¿ö£¬
- *          ²¢¸ù¾Ý±êÖ¾ÅÐ¶ÏÌø×ª APP¡¢½øÈëÖ÷²Ëµ¥»òÖ´ÐÐ¹Ì¼þ¸üÐÂµÈ²Ù×÷¡£
+ * @details å¯åŠ¨åŽåˆå§‹åŒ–ä¸²å£ã€å®šæ—¶å™¨å’Œæ–¹å‘æŽ§åˆ¶å¼•è„šï¼Œ
+ *          æ£€æŸ¥æ˜¯å¦ä¸ºé¦–æ¬¡ä¸Šç”µæˆ–è°ƒè¯•å™¨åˆ·å…¥ APP çš„æƒ…å†µï¼Œ
+ *          å¹¶æ ¹æ®æ ‡å¿—åˆ¤æ–­è·³è½¬ APPã€è¿›å…¥ä¸»èœå•æˆ–æ‰§è¡Œå›ºä»¶æ›´æ–°ç­‰æ“ä½œã€‚
  *
- * @note    ¸ÃÖ÷Ñ­»·ÊÇÕû¸ö Bootloader µÄ¿ØÖÆºËÐÄÂß¼­¡£
+ * @note    è¯¥ä¸»å¾ªçŽ¯æ˜¯æ•´ä¸ª Bootloader çš„æŽ§åˆ¶æ ¸å¿ƒé€»è¾‘ã€‚
  *
  * @author  ZJX
  * @date    2025-06-20
@@ -32,7 +32,7 @@ int main(void)
         flag = mBoot_read_flag();
         if (flag == APPRUN_FLAG_DATA)
         {
-            /* ÔËÐÐÊ§°Ü */
+            /* è¿è¡Œå¤±è´¥ */
             if (mBoot_run_app() == 0)
             {                
                 mBoot_write_flag(APPRUN_ERROR_FLAG_DATA);
@@ -40,12 +40,12 @@ int main(void)
         }
         else if (flag == INIT_FLAG_DATA || flag == APPRUN_ERROR_FLAG_DATA)
         {
-            /* Ö÷²Ëµ¥½çÃæ */
+            /* ä¸»èœå•ç•Œé¢ */
             mBoot_main_menu();
         }
         else if (flag == UPDATE_FLAG_DATA)
         {
-            /* ¸üÐÂ³É¹¦ */
+            /* æ›´æ–°æˆåŠŸ */
             if (mBoot_update())
             {                
                 mBoot_write_flag(APPRUN_FLAG_DATA);
