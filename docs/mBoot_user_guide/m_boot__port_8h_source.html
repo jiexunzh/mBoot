@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>mBoot: mBoot/mBoot_bootloader/Inc/mBoot_port.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">mBoot<span id="projectnumber">&#160;V1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('m_boot__port_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">mBoot_port.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="m_boot__port_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifndef MBOOT_PORT_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define MBOOT_PORT_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// #include &quot;gd32c11x.h&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">/**** mBoot UART port ****/</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#ac4d3fc7f1dbbb3b7b75fc53cafa76523">mBoot_uart_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#a9d13eb6444b5af2a6b96ce3a920a7e41">mBoot_uart_transmit_byte</a>(uint8_t data);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>uint8_t <a class="code hl_function" href="m_boot__port_8h.html#ae4a9bf2989379b431841e93afcd22813">is_mBoot_uart_transmit_complete</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>uint8_t <a class="code hl_function" href="m_boot__port_8h.html#abc96dab5943fceaee7efdf932849cd0e">is_mBoot_uart_receive_notEmpty</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>uint8_t <a class="code hl_function" href="m_boot__port_8h.html#a8e22a1445997d52eb28188f9ec898a19">mBoot_uart_receive_byte</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">/**** mBoot flash port ****/</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#a713880c8ee5b8f7a7b8fd220032a4ef1">mBoot_write_flash</a>(uint32_t WriteAddr, uint32_t* pBuffer, uint32_t NumToWrite);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#a04653591a58db12444fe2a7947b26a7f">mBoot_read_flash</a>(uint32_t ReadAddr, uint32_t* pBuffer, uint32_t NumToRead);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">/**** mBoot delay port ****/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#ad04a548a723133c290a30f4777a4dfb8">mBoot_delay_us</a>(uint32_t us);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">/**** timer port if mBoot use listen update command function when MCU power on ****/</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#aca1f0a872b48af9b0cd6e64009b4ae69">mBoot_timer_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>uint32_t <a class="code hl_function" href="m_boot__port_8h.html#af6c9d7f090c8c90b9e83aaa621cc8e09">mBoot_get_timer_counter</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">/**** rs485 port if mBoot use rs485 ****/</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#a2a5b3473a10d326cda2bcdd30cacce61">mBoot_rs485_dir_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#af55cec14339c96fb23ed320457dc0436">mBoot_rs485_dir_tx</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="m_boot__port_8h.html#a8bb422d8ca73c5c129334665b1689dcc">mBoot_rs485_dir_rx</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif </span><span class="comment">/* MBOOT_PORT_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="am_boot__port_8h_html_a04653591a58db12444fe2a7947b26a7f"><div class="ttname"><a href="m_boot__port_8h.html#a04653591a58db12444fe2a7947b26a7f">mBoot_read_flash</a></div><div class="ttdeci">void mBoot_read_flash(uint32_t ReadAddr, uint32_t *pBuffer, uint32_t NumToRead)</div><div class="ttdoc">读 Flash 数据</div><div class="ttdef"><b>定义</b> mBoot_port.c:88</div></div>
+<div class="ttc" id="am_boot__port_8h_html_a2a5b3473a10d326cda2bcdd30cacce61"><div class="ttname"><a href="m_boot__port_8h.html#a2a5b3473a10d326cda2bcdd30cacce61">mBoot_rs485_dir_init</a></div><div class="ttdeci">void mBoot_rs485_dir_init(void)</div><div class="ttdoc">初始化 RS485 方向控制引脚</div><div class="ttdef"><b>定义</b> mBoot_port.c:137</div></div>
+<div class="ttc" id="am_boot__port_8h_html_a713880c8ee5b8f7a7b8fd220032a4ef1"><div class="ttname"><a href="m_boot__port_8h.html#a713880c8ee5b8f7a7b8fd220032a4ef1">mBoot_write_flash</a></div><div class="ttdeci">void mBoot_write_flash(uint32_t WriteAddr, uint32_t *pBuffer, uint32_t NumToWrite)</div><div class="ttdoc">写 Flash 数据</div><div class="ttdef"><b>定义</b> mBoot_port.c:76</div></div>
+<div class="ttc" id="am_boot__port_8h_html_a8bb422d8ca73c5c129334665b1689dcc"><div class="ttname"><a href="m_boot__port_8h.html#a8bb422d8ca73c5c129334665b1689dcc">mBoot_rs485_dir_rx</a></div><div class="ttdeci">void mBoot_rs485_dir_rx(void)</div><div class="ttdoc">设置 RS485 为接收模式</div><div class="ttdef"><b>定义</b> mBoot_port.c:159</div></div>
+<div class="ttc" id="am_boot__port_8h_html_a8e22a1445997d52eb28188f9ec898a19"><div class="ttname"><a href="m_boot__port_8h.html#a8e22a1445997d52eb28188f9ec898a19">mBoot_uart_receive_byte</a></div><div class="ttdeci">uint8_t mBoot_uart_receive_byte(void)</div><div class="ttdoc">读取接收到的串口数据</div><div class="ttdef"><b>定义</b> mBoot_port.c:63</div></div>
+<div class="ttc" id="am_boot__port_8h_html_a9d13eb6444b5af2a6b96ce3a920a7e41"><div class="ttname"><a href="m_boot__port_8h.html#a9d13eb6444b5af2a6b96ce3a920a7e41">mBoot_uart_transmit_byte</a></div><div class="ttdeci">void mBoot_uart_transmit_byte(uint8_t data)</div><div class="ttdoc">向串口发送一个字节</div><div class="ttdef"><b>定义</b> mBoot_port.c:35</div></div>
+<div class="ttc" id="am_boot__port_8h_html_abc96dab5943fceaee7efdf932849cd0e"><div class="ttname"><a href="m_boot__port_8h.html#abc96dab5943fceaee7efdf932849cd0e">is_mBoot_uart_receive_notEmpty</a></div><div class="ttdeci">uint8_t is_mBoot_uart_receive_notEmpty(void)</div><div class="ttdoc">查询串口是否接收到数据（接收寄存器非空）</div><div class="ttdef"><b>定义</b> mBoot_port.c:54</div></div>
+<div class="ttc" id="am_boot__port_8h_html_ac4d3fc7f1dbbb3b7b75fc53cafa76523"><div class="ttname"><a href="m_boot__port_8h.html#ac4d3fc7f1dbbb3b7b75fc53cafa76523">mBoot_uart_init</a></div><div class="ttdeci">void mBoot_uart_init(void)</div><div class="ttdoc">初始化 mBoot 串口（无需配置中断）</div><div class="ttdef"><b>定义</b> mBoot_port.c:25</div></div>
+<div class="ttc" id="am_boot__port_8h_html_aca1f0a872b48af9b0cd6e64009b4ae69"><div class="ttname"><a href="m_boot__port_8h.html#aca1f0a872b48af9b0cd6e64009b4ae69">mBoot_timer_init</a></div><div class="ttdeci">void mBoot_timer_init(void)</div><div class="ttdoc">启动 1KHz 向上计数的定时器（用于监听超时功能）</div><div class="ttdef"><b>定义</b> mBoot_port.c:112</div></div>
+<div class="ttc" id="am_boot__port_8h_html_ad04a548a723133c290a30f4777a4dfb8"><div class="ttname"><a href="m_boot__port_8h.html#ad04a548a723133c290a30f4777a4dfb8">mBoot_delay_us</a></div><div class="ttdeci">void mBoot_delay_us(uint32_t us)</div><div class="ttdoc">延时函数（单位：微秒）</div><div class="ttdef"><b>定义</b> mBoot_port.c:99</div></div>
+<div class="ttc" id="am_boot__port_8h_html_ae4a9bf2989379b431841e93afcd22813"><div class="ttname"><a href="m_boot__port_8h.html#ae4a9bf2989379b431841e93afcd22813">is_mBoot_uart_transmit_complete</a></div><div class="ttdeci">uint8_t is_mBoot_uart_transmit_complete(void)</div><div class="ttdoc">查询串口发送是否完成（TC 标志）</div><div class="ttdef"><b>定义</b> mBoot_port.c:45</div></div>
+<div class="ttc" id="am_boot__port_8h_html_af55cec14339c96fb23ed320457dc0436"><div class="ttname"><a href="m_boot__port_8h.html#af55cec14339c96fb23ed320457dc0436">mBoot_rs485_dir_tx</a></div><div class="ttdeci">void mBoot_rs485_dir_tx(void)</div><div class="ttdoc">设置 RS485 为发送模式</div><div class="ttdef"><b>定义</b> mBoot_port.c:148</div></div>
+<div class="ttc" id="am_boot__port_8h_html_af6c9d7f090c8c90b9e83aaa621cc8e09"><div class="ttname"><a href="m_boot__port_8h.html#af6c9d7f090c8c90b9e83aaa621cc8e09">mBoot_get_timer_counter</a></div><div class="ttdeci">uint32_t mBoot_get_timer_counter(void)</div><div class="ttdoc">获取定时器当前计数值（单位：ms）</div><div class="ttdef"><b>定义</b> mBoot_port.c:123</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7eb8f161c02f94faadeb62ccc45cdb04.html">mBoot</a></li><li class="navelem"><a href="dir_d6cdaaed029f5bcc92a8c804aa59546a.html">mBoot_bootloader</a></li><li class="navelem"><a href="dir_75dd49e66c31661b191e109ef0b4dbba.html">Inc</a></li><li class="navelem"><a href="m_boot__port_8h.html">mBoot_port.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -14,7 +14,7 @@
 # Listing files
 *.cod
 *.htm
-*.html
+# *.html
 *.i
 *.lst
 *.map

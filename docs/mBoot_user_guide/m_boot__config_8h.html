@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>mBoot: mBoot/mBoot_config.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">mBoot<span id="projectnumber">&#160;V1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('m_boot__config_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">mBoot_config.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>mBoot 配置文件：定义硬件接口宏、功能开关、地址分区与命令标志  
+<a href="#details">更多...</a></p>
+
+<p><a href="m_boot__config_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:abd9262e23d1c0f8aa26c498871db7183" id="r_abd9262e23d1c0f8aa26c498871db7183"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd9262e23d1c0f8aa26c498871db7183">USE_LISTEN_UPDATE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ade0c93a22a34d8db53e93c5945227a0d" id="r_ade0c93a22a34d8db53e93c5945227a0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade0c93a22a34d8db53e93c5945227a0d">LISTEN_UPDATE_TIMEOUT</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memitem:a47a225f83aa5951f3792136efc0ab593" id="r_a47a225f83aa5951f3792136efc0ab593"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47a225f83aa5951f3792136efc0ab593">USE_RS485</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:abbdce0fdd0196e411df91297e257b27a" id="r_abbdce0fdd0196e411df91297e257b27a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbdce0fdd0196e411df91297e257b27a">ApplicationAddress</a>&#160;&#160;&#160;(0x08000000 + 16 * 1024)</td></tr>
+<tr class="memitem:a05df717e8ec7ad86824e25ad3b980c38" id="r_a05df717e8ec7ad86824e25ad3b980c38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05df717e8ec7ad86824e25ad3b980c38">mBoot_FLAG_ADDR</a>&#160;&#160;&#160;(<a class="el" href="#abbdce0fdd0196e411df91297e257b27a">ApplicationAddress</a> - 2 * 1024)</td></tr>
+<tr class="memitem:a6d9f26fefc43af8666f8a55040dce2d3" id="r_a6d9f26fefc43af8666f8a55040dce2d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d9f26fefc43af8666f8a55040dce2d3">ENABLE_PUTSTR</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:af976ef8f0b1f5ec6da57d3c2016c41a9" id="r_af976ef8f0b1f5ec6da57d3c2016c41a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af976ef8f0b1f5ec6da57d3c2016c41a9">CMD_MENU_STR</a>&#160;&#160;&#160;&quot;menu&quot;</td></tr>
+<tr class="memitem:ae5b0789f70e26a69fa082b9c980f51b3" id="r_ae5b0789f70e26a69fa082b9c980f51b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5b0789f70e26a69fa082b9c980f51b3">CMD_RUNAPP_STR</a>&#160;&#160;&#160;&quot;runapp&quot;</td></tr>
+<tr class="memitem:a757045c5db94bd3e69f9164197e1c503" id="r_a757045c5db94bd3e69f9164197e1c503"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a757045c5db94bd3e69f9164197e1c503">CMD_UPDATE_STR</a>&#160;&#160;&#160;&quot;update&quot;</td></tr>
+<tr class="memitem:ad5066b87b9fe8fb347cb16e99e84ff96" id="r_ad5066b87b9fe8fb347cb16e99e84ff96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5066b87b9fe8fb347cb16e99e84ff96">CMD_ERASE_STR</a>&#160;&#160;&#160;&quot;erase&quot;</td></tr>
+<tr class="memitem:aeb05ba58c79fed9a6b4f1a96051169c8" id="r_aeb05ba58c79fed9a6b4f1a96051169c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb05ba58c79fed9a6b4f1a96051169c8">CMD_UPLOAD_STR</a>&#160;&#160;&#160;&quot;upload&quot;</td></tr>
+<tr class="memitem:a298b8c4f4a132c8093624a0855d62304" id="r_a298b8c4f4a132c8093624a0855d62304"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a298b8c4f4a132c8093624a0855d62304">CMD_DISWP_STR</a>&#160;&#160;&#160;&quot;diswp&quot;</td></tr>
+<tr class="memitem:a0fde219dd419e308e644b68d20040f80" id="r_a0fde219dd419e308e644b68d20040f80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fde219dd419e308e644b68d20040f80">CMD_STRING_SIZE</a>&#160;&#160;&#160;((uint16_t)128)</td></tr>
+<tr class="memitem:ab57219f87116cd3f4792ff5f02373fdc" id="r_ab57219f87116cd3f4792ff5f02373fdc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab57219f87116cd3f4792ff5f02373fdc">RESPONSE_OK_CMD</a>&#160;&#160;&#160;&quot;OK&quot;</td></tr>
+<tr class="memitem:adfc7d8ab62b6298a5f72a3049387921e" id="r_adfc7d8ab62b6298a5f72a3049387921e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfc7d8ab62b6298a5f72a3049387921e">BINSIZE_CMD</a>&#160;&#160;&#160;&quot;BINSIZE=&quot;</td></tr>
+<tr class="memitem:a2ac142ee713829eadeb7b3c1246ec117" id="r_a2ac142ee713829eadeb7b3c1246ec117"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ac142ee713829eadeb7b3c1246ec117">RECEIVED_CMD</a>&#160;&#160;&#160;&quot;RECV&quot;</td></tr>
+<tr class="memitem:a756ec61dc71f03bc9d0674fa8178d0e4" id="r_a756ec61dc71f03bc9d0674fa8178d0e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a756ec61dc71f03bc9d0674fa8178d0e4">RECEIVED_ERROR_CMD</a>&#160;&#160;&#160;&quot;ERROR&quot;</td></tr>
+<tr class="memitem:a4a994272dcab8e00806a6d6fe5d4b853" id="r_a4a994272dcab8e00806a6d6fe5d4b853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a994272dcab8e00806a6d6fe5d4b853">NEW_LINE</a>(cmd)</td></tr>
+<tr class="memitem:a58076618c1c9e2a9877ba4abc2e3ddc1" id="r_a58076618c1c9e2a9877ba4abc2e3ddc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58076618c1c9e2a9877ba4abc2e3ddc1">INIT_FLAG_DATA</a>&#160;&#160;&#160;((uint32_t)(0xFFFFFFFF))</td></tr>
+<tr class="memitem:a400625f5420bd274f7bbb0854eb73b94" id="r_a400625f5420bd274f7bbb0854eb73b94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a400625f5420bd274f7bbb0854eb73b94">UPDATE_FLAG_DATA</a>&#160;&#160;&#160;((uint32_t)(0xEEEEEEEE))</td></tr>
+<tr class="memitem:aa2e2d09aee7ab62e34ef72a5088a9eea" id="r_aa2e2d09aee7ab62e34ef72a5088a9eea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2e2d09aee7ab62e34ef72a5088a9eea">ERASE_FLAG_DATA</a>&#160;&#160;&#160;((uint32_t)(0xDDDDDDDD))</td></tr>
+<tr class="memitem:a389ba8555f5b64ce42caad6fc0787dba" id="r_a389ba8555f5b64ce42caad6fc0787dba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a389ba8555f5b64ce42caad6fc0787dba">UPLOAD_FLAG_DATA</a>&#160;&#160;&#160;((uint32_t)(0xCCCCCCCC))</td></tr>
+<tr class="memitem:ab4480c5cd3175d0b0e80d492935b7abc" id="r_ab4480c5cd3175d0b0e80d492935b7abc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4480c5cd3175d0b0e80d492935b7abc">APPRUN_ERROR_FLAG_DATA</a>&#160;&#160;&#160;((uint32_t)(0xBBBBBBBB))</td></tr>
+<tr class="memitem:ad6669e16ba91abc1b8220e85889e7332" id="r_ad6669e16ba91abc1b8220e85889e7332"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6669e16ba91abc1b8220e85889e7332">APPRUN_FLAG_DATA</a>&#160;&#160;&#160;((uint32_t)(0x5A5A5A5A))</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>mBoot 配置文件：定义硬件接口宏、功能开关、地址分区与命令标志 </p>
+<p>本文件用于配置 mBoot 启动加载器与应用程序共用的关键参数， 包括是否使用监听更新命令、使用 RS485、地址分区、串口命令标志字段等。</p>
+<p>所有配置项应根据实际硬件平台进行适配。</p>
+<dl class="section note"><dt>注解</dt><dd>"mBoot_bootloader" 和 "mBoot_app" 均需包含本头文件以统一参数。</dd></dl>
+<dl class="section author"><dt>作者</dt><dd>ZJX </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025-06-20 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">宏定义说明</h2>
+<a id="abbdce0fdd0196e411df91297e257b27a" name="abbdce0fdd0196e411df91297e257b27a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbdce0fdd0196e411df91297e257b27a">&#9670;&#160;</a></span>ApplicationAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ApplicationAddress&#160;&#160;&#160;(0x08000000 + 16 * 1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4480c5cd3175d0b0e80d492935b7abc" name="ab4480c5cd3175d0b0e80d492935b7abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4480c5cd3175d0b0e80d492935b7abc">&#9670;&#160;</a></span>APPRUN_ERROR_FLAG_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APPRUN_ERROR_FLAG_DATA&#160;&#160;&#160;((uint32_t)(0xBBBBBBBB))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>更新失败标志 </p>
+
+</div>
+</div>
+<a id="ad6669e16ba91abc1b8220e85889e7332" name="ad6669e16ba91abc1b8220e85889e7332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6669e16ba91abc1b8220e85889e7332">&#9670;&#160;</a></span>APPRUN_FLAG_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APPRUN_FLAG_DATA&#160;&#160;&#160;((uint32_t)(0x5A5A5A5A))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>APP运行标志 </p>
+
+</div>
+</div>
+<a id="adfc7d8ab62b6298a5f72a3049387921e" name="adfc7d8ab62b6298a5f72a3049387921e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc7d8ab62b6298a5f72a3049387921e">&#9670;&#160;</a></span>BINSIZE_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BINSIZE_CMD&#160;&#160;&#160;&quot;BINSIZE=&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>上位机发送BIN文件大小的前置字符串 </p>
+
+</div>
+</div>
+<a id="a298b8c4f4a132c8093624a0855d62304" name="a298b8c4f4a132c8093624a0855d62304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298b8c4f4a132c8093624a0855d62304">&#9670;&#160;</a></span>CMD_DISWP_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_DISWP_STR&#160;&#160;&#160;&quot;diswp&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>取消读写保护命令 </p>
+
+</div>
+</div>
+<a id="ad5066b87b9fe8fb347cb16e99e84ff96" name="ad5066b87b9fe8fb347cb16e99e84ff96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5066b87b9fe8fb347cb16e99e84ff96">&#9670;&#160;</a></span>CMD_ERASE_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_ERASE_STR&#160;&#160;&#160;&quot;erase&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>擦除Flash命令 </p>
+
+</div>
+</div>
+<a id="af976ef8f0b1f5ec6da57d3c2016c41a9" name="af976ef8f0b1f5ec6da57d3c2016c41a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af976ef8f0b1f5ec6da57d3c2016c41a9">&#9670;&#160;</a></span>CMD_MENU_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_MENU_STR&#160;&#160;&#160;&quot;menu&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>bootloader主菜单命令 </p>
+
+</div>
+</div>
+<a id="ae5b0789f70e26a69fa082b9c980f51b3" name="ae5b0789f70e26a69fa082b9c980f51b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b0789f70e26a69fa082b9c980f51b3">&#9670;&#160;</a></span>CMD_RUNAPP_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_RUNAPP_STR&#160;&#160;&#160;&quot;runapp&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>运行APP命令 </p>
+
+</div>
+</div>
+<a id="a0fde219dd419e308e644b68d20040f80" name="a0fde219dd419e308e644b68d20040f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fde219dd419e308e644b68d20040f80">&#9670;&#160;</a></span>CMD_STRING_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_STRING_SIZE&#160;&#160;&#160;((uint16_t)128)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>命令的最大长度 </p>
+
+</div>
+</div>
+<a id="a757045c5db94bd3e69f9164197e1c503" name="a757045c5db94bd3e69f9164197e1c503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a757045c5db94bd3e69f9164197e1c503">&#9670;&#160;</a></span>CMD_UPDATE_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_UPDATE_STR&#160;&#160;&#160;&quot;update&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>更新命令 </p>
+
+</div>
+</div>
+<a id="aeb05ba58c79fed9a6b4f1a96051169c8" name="aeb05ba58c79fed9a6b4f1a96051169c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb05ba58c79fed9a6b4f1a96051169c8">&#9670;&#160;</a></span>CMD_UPLOAD_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_UPLOAD_STR&#160;&#160;&#160;&quot;upload&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>上传Flash 命令 </p>
+
+</div>
+</div>
+<a id="a6d9f26fefc43af8666f8a55040dce2d3" name="a6d9f26fefc43af8666f8a55040dce2d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9f26fefc43af8666f8a55040dce2d3">&#9670;&#160;</a></span>ENABLE_PUTSTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ENABLE_PUTSTR&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2e2d09aee7ab62e34ef72a5088a9eea" name="aa2e2d09aee7ab62e34ef72a5088a9eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e2d09aee7ab62e34ef72a5088a9eea">&#9670;&#160;</a></span>ERASE_FLAG_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERASE_FLAG_DATA&#160;&#160;&#160;((uint32_t)(0xDDDDDDDD))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>擦除固件标志 </p>
+
+</div>
+</div>
+<a id="a58076618c1c9e2a9877ba4abc2e3ddc1" name="a58076618c1c9e2a9877ba4abc2e3ddc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58076618c1c9e2a9877ba4abc2e3ddc1">&#9670;&#160;</a></span>INIT_FLAG_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_FLAG_DATA&#160;&#160;&#160;((uint32_t)(0xFFFFFFFF))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>初始默认标志（空板子的情况） </p>
+
+</div>
+</div>
+<a id="ade0c93a22a34d8db53e93c5945227a0d" name="ade0c93a22a34d8db53e93c5945227a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade0c93a22a34d8db53e93c5945227a0d">&#9670;&#160;</a></span>LISTEN_UPDATE_TIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LISTEN_UPDATE_TIMEOUT&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>上电监听功能时间，单位ms </p>
+
+</div>
+</div>
+<a id="a05df717e8ec7ad86824e25ad3b980c38" name="a05df717e8ec7ad86824e25ad3b980c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05df717e8ec7ad86824e25ad3b980c38">&#9670;&#160;</a></span>mBoot_FLAG_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mBoot_FLAG_ADDR&#160;&#160;&#160;(<a class="el" href="#abbdce0fdd0196e411df91297e257b27a">ApplicationAddress</a> - 2 * 1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a994272dcab8e00806a6d6fe5d4b853" name="a4a994272dcab8e00806a6d6fe5d4b853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a994272dcab8e00806a6d6fe5d4b853">&#9670;&#160;</a></span>NEW_LINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEW_LINE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cmd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">cmd <span class="stringliteral">&quot;\r\n&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2ac142ee713829eadeb7b3c1246ec117" name="a2ac142ee713829eadeb7b3c1246ec117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac142ee713829eadeb7b3c1246ec117">&#9670;&#160;</a></span>RECEIVED_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RECEIVED_CMD&#160;&#160;&#160;&quot;RECV&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>上位机发送一个固件数据包后，MCU应答，接收到上位机的更新数据包了且校验通过 </p>
+
+</div>
+</div>
+<a id="a756ec61dc71f03bc9d0674fa8178d0e4" name="a756ec61dc71f03bc9d0674fa8178d0e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756ec61dc71f03bc9d0674fa8178d0e4">&#9670;&#160;</a></span>RECEIVED_ERROR_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RECEIVED_ERROR_CMD&#160;&#160;&#160;&quot;ERROR&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>MCU应答，数据校验未通过或发生其他错误 </p>
+
+</div>
+</div>
+<a id="ab57219f87116cd3f4792ff5f02373fdc" name="ab57219f87116cd3f4792ff5f02373fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57219f87116cd3f4792ff5f02373fdc">&#9670;&#160;</a></span>RESPONSE_OK_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESPONSE_OK_CMD&#160;&#160;&#160;&quot;OK&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>上位机发送更新命令后，MCU应答，可以正式开始固件更新了 </p>
+
+</div>
+</div>
+<a id="a400625f5420bd274f7bbb0854eb73b94" name="a400625f5420bd274f7bbb0854eb73b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400625f5420bd274f7bbb0854eb73b94">&#9670;&#160;</a></span>UPDATE_FLAG_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UPDATE_FLAG_DATA&#160;&#160;&#160;((uint32_t)(0xEEEEEEEE))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>更新固件标志 </p>
+
+</div>
+</div>
+<a id="a389ba8555f5b64ce42caad6fc0787dba" name="a389ba8555f5b64ce42caad6fc0787dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a389ba8555f5b64ce42caad6fc0787dba">&#9670;&#160;</a></span>UPLOAD_FLAG_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UPLOAD_FLAG_DATA&#160;&#160;&#160;((uint32_t)(0xCCCCCCCC))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>上传固件标志 </p>
+
+</div>
+</div>
+<a id="abd9262e23d1c0f8aa26c498871db7183" name="abd9262e23d1c0f8aa26c498871db7183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9262e23d1c0f8aa26c498871db7183">&#9670;&#160;</a></span>USE_LISTEN_UPDATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USE_LISTEN_UPDATE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>使用监听更新功能 </p>
+
+</div>
+</div>
+<a id="a47a225f83aa5951f3792136efc0ab593" name="a47a225f83aa5951f3792136efc0ab593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a225f83aa5951f3792136efc0ab593">&#9670;&#160;</a></span>USE_RS485</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USE_RS485&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>使用RS485 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7eb8f161c02f94faadeb62ccc45cdb04.html">mBoot</a></li><li class="navelem"><a href="m_boot__config_8h.html">mBoot_config.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
