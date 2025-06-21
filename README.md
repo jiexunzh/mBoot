@@ -45,13 +45,13 @@ mBoot/
 
 ### App 适配
 
-### App lite
+#### App lite
 
 - 仅需修改”IROM1“并配置与 `mBoot_config.h` 一致的中断向量偏移即可
 
 - 前提条件：必须开启”Bootloader上电监听“功能，在点击上位机”固件升级“按钮后，手动将MCU重新上电即可进行固件升级
 
-### App full
+#### App full
 
 - 修改”IROM1“并配置与 `mBoot_config.h` 一致的中断向量偏移
 - 提供UART收发、Flash写Flag驱动
@@ -70,14 +70,31 @@ mBoot/
 | 0xA5 | 0~255  | BIN文件内容 | 低字节在前  |
 
 - 帧头（1B）：0xA5
-- 包序号（1B）：从0开始递增，目前只用了1个字节，最大可传输255KB固件
+- 包序号（1B）：从0开始递增，目前只用了1个字节，最大可传输256KB固件
 - 有效数据（1024B）：数据包，目前固定大小为1KB，若最后一个数据包的长度不足1KB，无效数据以**0xFF**填充（易于MCU整包写入Flash）。
 - CRC16-CCITT（2B）：多项式固定为 0x1021，初始值为 0xFFFF，CRC 低字节在前
 
 ### 固件升级流程
 
-![固件升级流程](assets/images/固件升级流程.png)
+![固件升级流程](Docs/images/固件升级流程.png)
 
 ### 上位机与MCU数据交互流程
 
-![泳道流程](assets/images/泳道流程.png)
+![泳道流程](Docs/images/泳道流程.png)
+
+## Flash 划分示例
+
+整体将MCU Flash划分为Bootloader区、共享区和应用程序区，共享区用来存储mBoot状态标志，以及其他需要存储或备份的用户数据。
+
+### GD32C113
+
+GD32C113和STM32F103一样，Flash的最小擦除单位是1KB大小的页，GD32C113示例工程的Flash划分如下：
+
+![C113_Flash](assets/images/C113_Flash.png)
+
+### GD32F407
+
+GD32F407的Flash最小擦除单位是扇区，前面4个扇区每个是16KB，第5个扇区是64KB，往后的扇区是128KB，GD32F407示例工程的Flash划分如下：
+
+![F407_Flash](assets/images/F407_Flash.png)
+
