@@ -90,11 +90,11 @@ mBoot/
 
 GD32C113和STM32F103一样，Flash的最小擦除单位是1KB大小的页，GD32C113示例工程的Flash划分如下：
 
-![C113_Flash](assets/images/C113_Flash.png)
+![C113_Flash](Docs/images/C113_Flash.png)
 
 ### GD32F407
 
 GD32F407的Flash最小擦除单位是扇区，前面4个扇区每个是16KB，第5个扇区是64KB，往后的扇区是128KB，GD32F407示例工程的Flash划分如下：
 
-![F407_Flash](assets/images/F407_Flash.png)
+![F407_Flash](Docs/images/F407_Flash.png)
 
