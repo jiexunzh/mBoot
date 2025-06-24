@@ -59,6 +59,8 @@
 #define BINSIZE_CMD            "BINSIZE=" /**< 上位机发送BIN文件大小的前置字符串 */
 #define RECEIVED_CMD           "RECV"     /**< 上位机发送一个固件数据包后，MCU应答，接收到上位机的更新数据包了且校验通过 */
 #define RECEIVED_ERROR_CMD     "ERROR"    /**< MCU应答，数据校验未通过或发生其他错误 */
+#define UPDATE_SUCCESS_CMD	   "SUCCESS"  /**< MCU固件升级成功标志 */
+#define UPDATE_FAIL_CMD	       "FAIL"     /**< MCU固件升级失败标志 */
 
 /* 预处理阶段拼接字符串 */
 #define NEW_LINE(cmd)          cmd "\r\n"

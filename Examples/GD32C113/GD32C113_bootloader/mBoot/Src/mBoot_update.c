@@ -37,8 +37,8 @@
  */
 int32_t firmware_update_process(void)
 {
-    static uint8_t recv_buf[PACKET_SIZE]; /* 接收缓冲 */
-    static uint8_t send_buf[20];          /* 发送缓冲 */
+    static uint8_t recv_buf[PACKET_SIZE]; 		/* 接收缓冲 */
+    static uint8_t send_buf[CMD_STRING_SIZE];   /* 发送缓冲 */
     uint16_t i, crc16, packet_num;
     uint8_t crc_l, crc_h;
     int32_t binFile_size = 0; /* bin文件大小 */

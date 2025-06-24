@@ -22,6 +22,7 @@
 #include "mBoot_port.h"
 #include "mBoot_update.h"
 #include "utils_intstr.h"
+#include <stdio.h>
 #include <string.h>
 
 typedef void (*pFunction)(void);
@@ -48,7 +49,7 @@ void mBoot_init(void)
 void detect_app_flashed(void)
 {
     uint32_t flag;
-    char buf[20] = {0};
+    uint8_t send_buf[CMD_STRING_SIZE];
 
     /* 如果是空板状态 */
     if (mBoot_read_flag() == INIT_FLAG_DATA)
@@ -59,15 +60,13 @@ void detect_app_flashed(void)
             mBoot_print("try to jump app.\r\n");
             /* 写入“APP运行标志” */
             mBoot_write_flag(APPRUN_FLAG_DATA);
-            /* 防止在某些MCU上可能出现读取异常: read error: 4294967295 */
-            mBoot_delay_us(10);
             flag = mBoot_read_flag();
             if (flag != APPRUN_FLAG_DATA)
             {
-                /* 写入或读取异常 */
-                Int2Str(buf, flag);
-                mBoot_transmit_string((uint8_t*)"read error: ");
-                mBoot_transmit_string((uint8_t*)buf);
+                /* Flag读取异常 */
+				memset(send_buf, 0, sizeof(send_buf));
+				sprintf((char*)send_buf, "FLAG READ ERROR,VALUE=%d\r\n", flag);
+				mBoot_transmit_string(send_buf);
             }
         }
     }
@@ -108,8 +107,6 @@ void listen_update_command(uint32_t nms)
             if (strstr((char*)cmdStr, NEW_LINE(CMD_UPDATE_STR)) != NULL)
             {
                 mBoot_write_flag(UPDATE_FLAG_DATA);
-                /* 防止后面出现读取Flag异常 */
-                mBoot_delay_us(10);
                 return;
             }
 
@@ -154,6 +151,8 @@ uint32_t mBoot_read_flag(void)
 void mBoot_write_flag(uint32_t flag)
 {
     mBoot_write_flash(mBoot_FLAG_ADDR, &flag, 1);
+	/* 一定程度上避免擦除或写入Flash后没有清除数据缓存，之后立即读取目标地址而读到旧数据 */
+	// mBoot_delay_us(10);	
 }
 
 void mBoot_main_menu(void)
@@ -263,29 +262,23 @@ static uint8_t check_app_valid(void)
  */
 uint8_t mBoot_update(void)
 {
-    char strNumber[10] = "";
+    uint8_t send_buf[CMD_STRING_SIZE];
     int32_t Size = 0;
 
     Size = firmware_update_process();
-    /* 给上位机一点时间切换为接收回显模式 */
-    mBoot_delay_us(10000);
+
     /* 升级成功 */
     if (Size > 0)           
     {
-        mBoot_transmit_string((uint8_t*)"Update finished!\r\n");
-        Int2Str(strNumber, Size);
-        mBoot_transmit_string((uint8_t*)"APP size: ");
-        mBoot_transmit_string((uint8_t*)strNumber);
-        mBoot_transmit_string((uint8_t*)"Bytes.\r\n");
+		mBoot_transmit_string((uint8_t*)NEW_LINE(UPDATE_SUCCESS_CMD));
         return 1;
     }
     else
     {
-        mBoot_transmit_string((uint8_t*)"Update failed!\r\n");
-        Size = -Size;
-        Int2Str(strNumber, Size);
-        mBoot_transmit_string((uint8_t*)"error code: -");
-        mBoot_transmit_string((uint8_t*)strNumber);
+        mBoot_transmit_string((uint8_t*)UPDATE_FAIL_CMD);
+		memset(send_buf, 0, sizeof(send_buf));
+		sprintf((char*)send_buf, ",ERROR CODE=%d\r\n", Size);
+        mBoot_transmit_string(send_buf);
         return 0;
     }
 }
