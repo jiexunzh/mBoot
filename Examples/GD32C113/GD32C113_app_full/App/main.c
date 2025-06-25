@@ -4,6 +4,7 @@
  * @brief   mBoot app full 的主函数入口
  *
  * @note    具备响应mBoot命令，主动从APP切换回Bootloader完整功能
+ *          注意：本示例使用MCU内部晶振！
  *
  * @author  ZJX
  * @date    2025-06-20

@@ -6,6 +6,7 @@
  * @note    只需修改IROM1和中断向量偏移，与“mBoot_config.h”对应即可
  *          更新操作可通过上位机与MCU上电配合完成
  *          前提条件：Bootloader必须开启监听更新功能！
+ *          注意：本示例使用MCU内部晶振！
  *
  * @author  ZJX
  * @date    2025-06-20

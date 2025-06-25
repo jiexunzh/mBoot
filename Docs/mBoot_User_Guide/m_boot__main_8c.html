@@ -99,6 +99,7 @@ $(function(){initNavTree('m_boot__main_8c.html','',''); });
 <code>#include &quot;<a class="el" href="m_boot__port_8h_source.html">mBoot_port.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="m_boot__update_8h_source.html">mBoot_update.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils__intstr_8h_source.html">utils_intstr.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -120,14 +121,19 @@ $(function(){initNavTree('m_boot__main_8c.html','',''); });
 <tr class="memitem:a588a9f02b5a0d03aacb26257d4b64392" id="r_a588a9f02b5a0d03aacb26257d4b64392"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a588a9f02b5a0d03aacb26257d4b64392">listen_update_command</a> (uint32_t nms)</td></tr>
 <tr class="memdesc:a588a9f02b5a0d03aacb26257d4b64392"><td class="mdescLeft">&#160;</td><td class="mdescRight">bootloader启动时阻塞监听更新命令一段时间  <br /></td></tr>
 <tr class="memitem:a68b062748eefb5cf2216ffacfe9869d1" id="r_a68b062748eefb5cf2216ffacfe9869d1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68b062748eefb5cf2216ffacfe9869d1">mBoot_read_flag</a> (void)</td></tr>
+<tr class="memdesc:a68b062748eefb5cf2216ffacfe9869d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取mBoot状态标志  <br /></td></tr>
 <tr class="memitem:aa960f703d912be703bee90eb59caa96f" id="r_aa960f703d912be703bee90eb59caa96f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa960f703d912be703bee90eb59caa96f">mBoot_write_flag</a> (uint32_t flag)</td></tr>
+<tr class="memdesc:aa960f703d912be703bee90eb59caa96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入mBoot状态标志  <br /></td></tr>
 <tr class="memitem:ad0fef5ce8ff06f4cbca5655c55cc785d" id="r_ad0fef5ce8ff06f4cbca5655c55cc785d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0fef5ce8ff06f4cbca5655c55cc785d">mBoot_main_menu</a> (void)</td></tr>
+<tr class="memdesc:ad0fef5ce8ff06f4cbca5655c55cc785d"><td class="mdescLeft">&#160;</td><td class="mdescRight">mBoot主菜单界面  <br /></td></tr>
 <tr class="memitem:a09350dba768641db1753211633893ec3" id="r_a09350dba768641db1753211633893ec3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09350dba768641db1753211633893ec3">mBoot_run_app</a> (void)</td></tr>
 <tr class="memdesc:a09350dba768641db1753211633893ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">如果有效，跳转到主应用程序  <br /></td></tr>
 <tr class="memitem:a3314d735017b57430e26fd27ccc90a75" id="r_a3314d735017b57430e26fd27ccc90a75"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3314d735017b57430e26fd27ccc90a75">mBoot_update</a> (void)</td></tr>
-<tr class="memdesc:a3314d735017b57430e26fd27ccc90a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行固件更新步骤  <br /></td></tr>
+<tr class="memdesc:a3314d735017b57430e26fd27ccc90a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新固件  <br /></td></tr>
 <tr class="memitem:a9d5f9959b400794f86ebbc8c44bfef16" id="r_a9d5f9959b400794f86ebbc8c44bfef16"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d5f9959b400794f86ebbc8c44bfef16">mBoot_erase</a> (void)</td></tr>
+<tr class="memdesc:a9d5f9959b400794f86ebbc8c44bfef16"><td class="mdescLeft">&#160;</td><td class="mdescRight">擦除固件  <br /></td></tr>
 <tr class="memitem:afa2707a9a03d537169863aa2e17f46ff" id="r_afa2707a9a03d537169863aa2e17f46ff"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa2707a9a03d537169863aa2e17f46ff">mBoot_upload</a> (void)</td></tr>
+<tr class="memdesc:afa2707a9a03d537169863aa2e17f46ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传固件  <br /></td></tr>
 <tr class="memitem:a5393fb60e20ef4caccd510bb364f175e" id="r_a5393fb60e20ef4caccd510bb364f175e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5393fb60e20ef4caccd510bb364f175e">mBoot_transmit_string</a> (uint8_t *buf)</td></tr>
 <tr class="memdesc:a5393fb60e20ef4caccd510bb364f175e"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过UART发送一个以空结尾的字符串  <br /></td></tr>
 <tr class="memitem:a3cc39274bbfb0857f2e90db4102ee5f7" id="r_a3cc39274bbfb0857f2e90db4102ee5f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cc39274bbfb0857f2e90db4102ee5f7">mBoot_print</a> (char *s)</td></tr>
@@ -328,6 +334,14 @@ $(function(){initNavTree('m_boot__main_8c.html','',''); });
       </table>
 </div><div class="memdoc">
 
+<p>擦除固件 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">1</td><td>擦除成功；0 擦除失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a386e8cf5a58890d6afa2d13d39aef8de" name="a386e8cf5a58890d6afa2d13d39aef8de"></a>
@@ -364,6 +378,8 @@ $(function(){initNavTree('m_boot__main_8c.html','',''); });
       </table>
 </div><div class="memdoc">
 
+<p>mBoot主菜单界面 </p>
+
 </div>
 </div>
 <a id="a3cc39274bbfb0857f2e90db4102ee5f7" name="a3cc39274bbfb0857f2e90db4102ee5f7"></a>
@@ -399,6 +415,8 @@ $(function(){initNavTree('m_boot__main_8c.html','',''); });
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>读取mBoot状态标志 </p>
 
 </div>
 </div>
@@ -548,7 +566,7 @@ $(function(){initNavTree('m_boot__main_8c.html','',''); });
       </table>
 </div><div class="memdoc">
 
-<p>执行固件更新步骤 </p>
+<p>更新固件 </p>
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
     <tr><td class="paramname">1</td><td>更新成功；0 更新失败 </td></tr>
@@ -573,6 +591,14 @@ $(function(){initNavTree('m_boot__main_8c.html','',''); });
       </table>
 </div><div class="memdoc">
 
+<p>上传固件 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">1</td><td>上传成功；0 上传失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa960f703d912be703bee90eb59caa96f" name="aa960f703d912be703bee90eb59caa96f"></a>
@@ -589,6 +615,8 @@ $(function(){initNavTree('m_boot__main_8c.html','',''); });
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>写入mBoot状态标志 </p>
 
 </div>
 </div>

@@ -20,8 +20,8 @@ void flash_write_data(uint32_t addr, uint32_t* data, uint32_t length)
         fmc_word_program(addr + i * 4, data[i]);
     }
 
-	// 清除数据缓存
-	fmc_dbus_reset();
+	// 清除数据缓存，避免后续读取到旧的脏数据
+	fmc_dbus_reset();	// 先决条件：fmc_unlock
 	
     // 锁定Flash
     fmc_lock();

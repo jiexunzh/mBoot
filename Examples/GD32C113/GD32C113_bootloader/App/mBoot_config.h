@@ -65,7 +65,7 @@
 /* 预处理阶段拼接字符串 */
 #define NEW_LINE(cmd)          cmd "\r\n"
 
-/* 状态标志，存储在共享信息区，以字为单位（有些芯片不支持半字访问） */
+/* 状态标志，存储在共享信息区，以字为单位（因为有些芯片的Flash控制器不支持半字/字节访问） */
 #define INIT_FLAG_DATA         ((uint32_t)(0xFFFFFFFF)) /**< 初始默认标志（空板子的情况） */
 #define UPDATE_FLAG_DATA       ((uint32_t)(0xEEEEEEEE)) /**< 更新固件标志 */
 #define ERASE_FLAG_DATA        ((uint32_t)(0xDDDDDDDD)) /**< 擦除固件标志 */

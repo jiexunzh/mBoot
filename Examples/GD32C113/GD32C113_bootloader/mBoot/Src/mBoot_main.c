@@ -141,6 +141,9 @@ static uint8_t is_time_passed(uint32_t timeout)
     return 0;
 }
 
+/**
+ * @brief  读取mBoot状态标志
+ */
 uint32_t mBoot_read_flag(void)
 {
     uint32_t flag = 0;
@@ -148,13 +151,17 @@ uint32_t mBoot_read_flag(void)
     return flag;
 }
 
+/**
+ * @brief  写入mBoot状态标志
+ */
 void mBoot_write_flag(uint32_t flag)
 {
     mBoot_write_flash(mBoot_FLAG_ADDR, &flag, 1);
-	/* 一定程度上避免擦除或写入Flash后没有清除数据缓存，之后立即读取目标地址而读到旧数据 */
-	// mBoot_delay_us(10);	
 }
 
+/**
+ * @brief  mBoot主菜单界面
+ */
 void mBoot_main_menu(void)
 {
     uint8_t cmdStr[CMD_STRING_SIZE] = {0};
@@ -257,7 +264,7 @@ static uint8_t check_app_valid(void)
 }
 
 /**
- * @brief  执行固件更新步骤
+ * @brief  更新固件
  * @retval 1 更新成功；0 更新失败
  */
 uint8_t mBoot_update(void)
@@ -267,14 +274,15 @@ uint8_t mBoot_update(void)
 
     Size = firmware_update_process();
 
-    /* 升级成功 */
     if (Size > 0)           
     {
+        /* 上报固件升级成功 */
 		mBoot_transmit_string((uint8_t*)NEW_LINE(UPDATE_SUCCESS_CMD));
         return 1;
     }
     else
     {
+        /* 上报固件升级失败和错误码 */
         mBoot_transmit_string((uint8_t*)UPDATE_FAIL_CMD);
 		memset(send_buf, 0, sizeof(send_buf));
 		sprintf((char*)send_buf, ",ERROR CODE=%d\r\n", Size);
@@ -283,12 +291,20 @@ uint8_t mBoot_update(void)
     }
 }
 
+/**
+ * @brief  擦除固件
+ * @retval 1 擦除成功；0 擦除失败
+ */
 uint8_t mBoot_erase(void)
 {
     mBoot_transmit_string((uint8_t*)"\r\ndeveloping...\r\n");
     return 1;
 }
 
+/**
+ * @brief  上传固件
+ * @retval 1 上传成功；0 上传失败
+ */
 uint8_t mBoot_upload(void)
 {
     mBoot_transmit_string((uint8_t*)"\r\ndeveloping...\r\n");

@@ -73,7 +73,7 @@ int32_t firmware_update_process(void)
     }
 
     /* 250410: 延迟一段时间再应答，否则在极少数配置差的电脑上，接收到的会是乱码，原因未知 */
-    mBoot_delay_us(10000);
+    mBoot_delay_us(20000);
     memset(send_buf, 0, sizeof(send_buf));
     sprintf((char*)send_buf, "%d\r\n", binFile_size);
     /* 响应bin文件大小"xxxx\r\n" */
